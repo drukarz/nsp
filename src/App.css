@@ -1,38 +1,159 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --off-white: #fafafa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav {
+  background-color: var(--off-white);
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-logo {
+  height: 60px;
+  width: 60px;
+}
+
+.nav-logo:hover {
+  cursor: pointer;
+}
+
+.nav .nav-content {
+  max-width: 900px;
+  padding: 0rem 3rem;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100%;
+}
+
+.nav-item {
+  display: inline;
+}
+
+.nav-item-common{
+  display: inline-block;
+  width: 15%;
+  height: 60px;
+  background-repeat: no-repeat;
+}
+
+.nav-item-back-about-us{
+  background-image : url('./assets/images/buttons/about_us.jpg');
+}
+
+.nav-item-back-about-us:hover {
+  background-image : url('./assets/images/buttons/about_us_h.jpg');
+}
+
+.nav-item-back-courses{
+  background-image : url('./assets/images/buttons/courses.jpg');
+}
+
+.nav-item-back-courses:hover {
+  background-image : url('./assets/images/buttons/courses_h.jpg');
+}
+
+.nav-item-back-gallery{
+  background-image : url('./assets/images/buttons/gallery.jpg');
+}
+
+.nav-item-back-gallery:hover {
+  background-image : url('./assets/images/buttons/gallery_h.jpg');
+}
+
+.nav-item-back-contact{
+  background-image : url('./assets/images/buttons/contact.jpg');
+}
+
+.nav-item-back-contact:hover {
+  background-image : url('./assets/images/buttons/contact_h.jpg');
+}
+
+.section {
+}
+
+.section-dark {
+  background: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.section-1 {
+  background-image : url('./assets/images/section_1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  padding: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section-2 {
+  background-image : url('./assets/images/section_2.jpg');
+  background-repeat: no-repeat;
+  background-size: 100vw;
 }
+
+.top-width {
+  width:  100vw;
+}
+
+.reg-item {
+  max-width: 900px;
+  padding: 0rem 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.reg-item-1{
+  max-width: 300px;
+  padding: 0rem 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.offer-text
+{
+  text-align: left;
+  font-size: 15pt;
+  width:  100%;
+}
+
+.img-space
+{
+  margin:0 5%;
+}
+
+.gallery-img-space
+{
+  width:  500px;
+  height: 300px;
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.img-c {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+
