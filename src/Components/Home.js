@@ -16,7 +16,7 @@ export default class Home extends Component
 
         return(
             <div>
-                <img src={Top} className="top-width"/>
+                <img src={Top} alt="" className="top-width"/>
                 <div className="App">
                     <Navbar/>
                     <Section

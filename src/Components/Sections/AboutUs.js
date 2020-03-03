@@ -4,10 +4,11 @@ class AboutUs extends Component
 {
     render(){
         return(
-            <div className="offer-text">
+            <div className="text-offer-about">
 
-                Jeśli jesteś osobą związaną z branżą IT, bądź masz takie aspiracje to byc może zainteresuje Cię nasza oferta.
-
+                <div>
+                    Jeśli jesteś osobą związaną z branżą IT, bądź masz takie aspiracje to byc może zainteresuje Cię nasza oferta.
+                </div>
                 <h4>Zwracamy się do</h4>
 
                 <ul>
