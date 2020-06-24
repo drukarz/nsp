@@ -36,7 +36,7 @@ class Navbar extends Component
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-item-common nav-item-back-gallery"
+                            <Link className="nav-item-common nav-item-back-schedule"
                                   activeClass="active"
                                   to="section3"
                                   spy={true}
@@ -47,9 +47,20 @@ class Navbar extends Component
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-item-common nav-item-back-contact"
+                            <Link className="nav-item-common nav-item-back-gallery"
                                   activeClass="active"
                                   to="section4"
+                                  spy={true}
+                                  smooth={true}
+                                  offset={-70}
+                                  duration={500}
+                            >
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-item-common nav-item-back-contact"
+                                  activeClass="active"
+                                  to="section5"
                                   spy={true}
                                   smooth={true}
                                   offset={-70}

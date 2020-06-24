@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import ReactJS from "../../assets/images/courses/react.jpg";
+import ReactJSH from "../../assets/images/courses/react_h.jpg";
 import Docker from "../../assets/images/courses/docker.jpg";
 import DockerH from "../../assets/images/courses/docker_h.jpg";
 import Ansible from "../../assets/images/courses/ansible.jpg";
@@ -10,11 +11,18 @@ import Spring from "../../assets/images/courses/spring.jpg";
 import SpringH from "../../assets/images/courses/spring_h.jpg";
 import {Dialog} from 'primereact/dialog';
 import {Button} from 'primereact/button';
-import ScrumDescription from "./CoursesDescriptions/ScrumDescription";
-import SpringDescription from "./CoursesDescriptions/SpringDescription";
-import DockerDescription from "./CoursesDescriptions/DockerDescription";
-import ReactDescription from "./CoursesDescriptions/ReactDescription";
-import AnsibleDescription from "./CoursesDescriptions/AnsibleDescription";
+import {Accordion, AccordionTab} from 'primereact/accordion';
+import ScrumDescription from "./CoursesDescriptions/Scrum/ScrumDescription";
+import ScrumModules from "./CoursesDescriptions/Scrum/ScrumModules";
+import DockerDescription from "./CoursesDescriptions/Docker/DockerDescription";
+import DockerModules from "./CoursesDescriptions/Docker/DockerModules";
+import ReactDescription from "./CoursesDescriptions/ReactJS/ReactJSDescription";
+import ReactModules from "./CoursesDescriptions/ReactJS/ReactJSModules";
+import AnsibleDescription from "./CoursesDescriptions/Ansible/AnsibleDescription";
+import AnisbleModules from "./CoursesDescriptions/Ansible/AnisbleModules";
+
+import SpringMicroservicesDescription from "./CoursesDescriptions/SpringMicroservices/SpringMicroservicesDescription";
+import SpringMicroservicesModules from "./CoursesDescriptions/SpringMicroservices/SpringMicroservicesModules";
 
 class Courses extends Component
 {
@@ -40,30 +48,65 @@ class Courses extends Component
     {
         if(actionId === "react")
         {
+
+            const description = ReactDescription();
+
+            this.setState({header: "React JS",
+                aim: description.aim,
+                result: description.result,
+                information: description.informations,
+                modules: ReactModules()});
+
             this.setState({header: "React JS", content: ReactDescription()});
         }
 
         if(actionId === "docker")
         {
+            const dockerDescription = DockerDescription();
+
+            this.setState({header: "Docker",
+                aim: dockerDescription.aim,
+                result: dockerDescription.result,
+                information: dockerDescription.informations,
+                modules: DockerModules()});
+
             this.setState({header: "Docker", content: DockerDescription()});
         }
 
         if(actionId === "spring")
         {
-            this.setState({header: "Spring", content: SpringDescription()});
+            const springDescription = SpringMicroservicesDescription();
+
+            this.setState({header: "Microservices in Spring",
+                aim: springDescription.aim,
+                result: springDescription.result,
+                information: springDescription.informations,
+                modules: SpringMicroservicesModules()});
         }
 
         if(actionId === "ansible")
         {
-            this.setState({header: "Ansible", content: AnsibleDescription()});
+            const anisbleDescription = AnsibleDescription();
+
+            this.setState({header: "Ansible",
+                           aim: anisbleDescription.aim,
+                           result: anisbleDescription.result,
+                           information: anisbleDescription.informations,
+                           modules: AnisbleModules()});
         }
 
         if(actionId === "scrum")
         {
-            this.setState({header: "Scrum", content: ScrumDescription()});
+            const scrumDescription = ScrumDescription();
+
+            this.setState({header: "Scrum",
+                           aim: scrumDescription.aim,
+                           result: scrumDescription.result,
+                           information: scrumDescription.informations,
+                           modules: ScrumModules()});
         }
 
-          this.setState({visible: true});
+        this.setState({visible: true});
     }
 
     onMouseOver = (actionId) =>
@@ -118,7 +161,9 @@ class Courses extends Component
         return(
             <div>
                 <br/>
-                <img src={ReactJS} className="img-space" alt=""  onClick={() => this.onClick("react")}/>
+
+                {this.state.reactHighlight ? (<img src={ReactJSH} className="img-space" alt="" onMouseLeave={() => this.onMouseLeave("react")} onClick={() => this.onClick("react")}/>) :
+                                             (<img src={ReactJS} className="img-space" alt="" onMouseOver={() => this.onMouseOver("react")}/>)}
 
                 {this.state.springHighlight ? (<img src={SpringH} className="img-space" alt="" onMouseLeave={() => this.onMouseLeave("spring")} onClick={() => this.onClick("spring")}/>) :
                                               (<img src={Spring} className="img-space" alt="" onMouseOver={() => this.onMouseOver("spring")}/>)}
@@ -136,7 +181,21 @@ class Courses extends Component
                 <br/>
                 <Dialog header={this.state.header} visible={this.state.visible} style={{width: '50vw'}}
                         footer={footer} onHide={this.onHide} modal={true} maximizable>
-                    {this.state.content}
+
+                    <Accordion className="courses-description">
+                        <AccordionTab header="cel szkolenia" style={{'fontSize': '2.5em'}}>
+                            {this.state.aim}
+                        </AccordionTab>
+                        <AccordionTab header="spodziewany rezultat">
+                            {this.state.result}
+                        </AccordionTab>
+                        <AccordionTab header="program">
+                            {this.state.modules}
+                        </AccordionTab>
+                        <AccordionTab header="informacje organizacyjne">
+                            {this.state.information}
+                        </AccordionTab>
+                    </Accordion>
                 </Dialog>
             </div>
         )

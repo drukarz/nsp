@@ -211,8 +211,6 @@
     font-size: 15pt;
 }
 
-
-
 .nav-item-back-about-us{
   background-image : url('./assets/images/buttons/about_us.jpg');
 }
@@ -227,6 +225,14 @@
 
 .nav-item-back-courses:hover {
   background-image : url('./assets/images/buttons/courses_h.jpg');
+}
+
+.nav-item-back-schedule{
+    background-image : url('./assets/images/buttons/schedule.jpg');
+}
+
+.nav-item-back-schedule:hover {
+    background-image : url('./assets/images/buttons/schedule_h.jpg');
 }
 
 .nav-item-back-gallery{
@@ -245,3 +251,7 @@
   background-image : url('./assets/images/buttons/contact_h.jpg');
 }
 
+.courses-description {
+    text-align: left;
+    fontSize: 20px;
+}

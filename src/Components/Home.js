@@ -5,6 +5,7 @@ import AboutUs from "./Sections/AboutUs";
 import Courses from "./Sections/Courses";
 import Gallery from "./Sections/Gallery";
 import Contact from "./Sections/Contact";
+import Schedule from "./Sections/Schedule";
 
 import Top from '../assets/images/top_1920x360.jpg';
 
@@ -24,10 +25,15 @@ export default class Home extends Component
                         title="O Nas"
                         subtitle={about}
                         id="section1"/>
-                      <Section
+                    <Section
                         sectionClass="section-2"
                         title="Kursy"
                         subtitle={<Courses/>}
+                        id="section2"/>
+                    <Section
+                        sectionClass="section-2"
+                        title="Harmonogram"
+                        subtitle={<Schedule/>}
                         id="section2"/>
                     <Section
                         sectionClass="section-2"

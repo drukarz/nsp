@@ -37,14 +37,15 @@ class AboutUs extends Component
 
                 A może choć na chwilę zamieszkać w górskim zaciszu, odciąć się od supportu i w spokoju nauczyć się czegoś
                 nowego? Poszerzyć swoją wiedzę w kilkuosobowej grupie a po zajęciach wyskoczyć na narty na pobliski stok
-                w Kasinie. Albo wybrać się na wycieczkę w okolicach Śnieżnicy, dla hardkorów - MTB.
-                Albo po prostu mały chillout w naszym SPA.
+                w Kasinie. Albo wybrać się na wycieczkę w okolicach Śnieżnicy, pieszo, a dla "nieco zwariowanych" downhill
+                na stoku Śnieżnicy.
+                Oferujemy także miły wypoczynek w naszym przytulnym SPA.
                 <br/>
                 <br/>
 
                 My, programiści i scrum masterzy mamy wiele lat doświadczenia w kodowaniu, scrumowaniu i prowadzeniu kursów.
                 Podzielimy się z Wami wiedzą. Odcięci od biura nauczycie się czegoś pożytecznego. Nie będzieci musieli
-                wertować dokumentacji, nie stracicie czasu, nie pozwolimy Wam trafić na koniec internetu. Nasza kuchnia, wygodnie pokoje i świeże
+                wertować dokumentacji, nie stracicie czasu, nie pozwolimy Wam trafić na "koniec internetu". Nasza kuchnia, wygodnie pokoje i świeże
                 powietrze na pewno pomoże Wam w zdobyciu wiedzy.
 
             </div>
